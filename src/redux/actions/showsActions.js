@@ -1,6 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import apiUrl from "../../url";
+import apiUrl from "../../../url";
+
 
 const getShows = createAsyncThunk("showssStore", async () => {
   let res = await axios.get(`${apiUrl}/shows`)
