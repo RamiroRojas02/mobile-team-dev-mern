@@ -2,7 +2,10 @@ import Cities from "../screen/Cities";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Home from "../screens/Home";
 import Ionicons from 'react-native-vector-icons/Ionicons'
-/* import { getHeaderTitle } from '@react-navigation/elements'; */
+
+import StacksHotels from "./StacksHotels";
+
+
 
 const Tab = createBottomTabNavigator();
 
@@ -33,7 +36,7 @@ export default function MyTabs() {
 
       <Tab.Screen name="Cities" component={Cities}  />
       <Tab.Screen name="Home" component={Home}  />
-
+      <Tab.Screen name="Hotels" component={StacksHotels}/>
     </Tab.Navigator>
   );
 }
