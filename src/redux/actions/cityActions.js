@@ -17,7 +17,7 @@ const getCity = createAsyncThunk('getCity',async()=>{
 })
 /*  */
 const getCityFilter = createAsyncThunk("getCitiesFilter",async ({value,continente}) => {
-    let url = `${BASE_URL}/cities/?${continente}${value}`;
+    let url = `${apiUrl}/cities/?${continente}${value}`;
       try {
         const res = await axios.get(url);
 
@@ -34,7 +34,7 @@ const getCityFilter = createAsyncThunk("getCitiesFilter",async ({value,continent
   );
   const getMyCities = createAsyncThunk('myCities', async(id)=>{
     try {
-      let res = await axios.get(`${BASE_URL}/cities/?userId=${id}`)
+      let res = await axios.get(`${apiUrl}/cities/?userId=${id}`)
 
       return {
         city : res.data.response
@@ -47,7 +47,7 @@ const getCityFilter = createAsyncThunk("getCitiesFilter",async ({value,continent
     let {token,id}= data
     let header = { headers : { 'Authorization': `Bearer ${token}` }}
 
-    let res = await axios.delete(`${BASE_URL}/cities/${id}`,header)
+    let res = await axios.delete(`${apiUrl}/cities/${id}`,header)
     return {
       eliminate : res.data
     }
@@ -58,7 +58,7 @@ const getCityFilter = createAsyncThunk("getCitiesFilter",async ({value,continent
     let header = { headers : { 'Authorization': `Bearer ${token}` }}
 
     try {
-      let res= await axios.put(`${BASE_URL}/cities/${id}`,city,header)
+      let res= await axios.put(`${apiUrl}/cities/${id}`,city,header)
 
       return {
         messagge : res.data.message,

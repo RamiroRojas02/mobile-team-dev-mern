@@ -1,9 +1,8 @@
-
 import Cities from "../screen/Cities";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Home from "../screens/Home";
-import { getHeaderTitle } from '@react-navigation/elements';
 import Ionicons from 'react-native-vector-icons/Ionicons'
+/* import { getHeaderTitle } from '@react-navigation/elements'; */
 
 const Tab = createBottomTabNavigator();
 
