@@ -1,4 +1,4 @@
-
+import Cities from "../screen/Cities";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Home from "../screens/Home";
 import Ionicons from 'react-native-vector-icons/Ionicons'
@@ -12,6 +12,7 @@ const Tab = createBottomTabNavigator();
 export default function MyTabs() {
   return (
     <Tab.Navigator screenOptions={({ route }) => ({
+
       headerStyle:{backgroundColor:"#99b898"},
       tabBarStyle:{backgroundColor:"#2a363bff"},
       tabBarIcon: ({ focused, color, size }) => {
@@ -32,6 +33,8 @@ export default function MyTabs() {
       tabBarActiveTintColor: 'tomato',
       tabBarInactiveTintColor: 'gray',
     })}>
+
+      <Tab.Screen name="Cities" component={Cities}  />
       <Tab.Screen name="Home" component={Home}  />
       <Tab.Screen name="Hotels" component={StacksHotels}/>
     </Tab.Navigator>
