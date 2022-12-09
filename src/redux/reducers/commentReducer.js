@@ -1,6 +1,6 @@
 import {createReducer} from '@reduxjs/toolkit'
 import commentActions from '../actions/commentActions'
-import Swal from 'sweetalert2'
+// import Swal from 'sweetalert2'
 
 
 
@@ -19,7 +19,7 @@ const commentReducer = createReducer(initialState,(builder)=>{
         let {success,messagge,comment} = action.payload
         
             if (success) {
-                Swal.fire("Posted!", "Your comment has been posted.", "success")
+                // Swal.fire("Posted!", "Your comment has been posted.", "success")
                 
                 return {
                     ...state,
@@ -29,7 +29,7 @@ const commentReducer = createReducer(initialState,(builder)=>{
             
         }
             }else{
-                Swal.fire('Error!',`${messagge.map(e => e.message)}`,"error")
+                // Swal.fire('Error!',`${messagge.map(e => e.message)}`,"error")
                 
             }
         

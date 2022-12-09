@@ -1,10 +1,11 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from 'axios'
-import { BASE_URL } from '../../api/url'
+import apiUrl from "../../../url";
+
 
 const getCity = createAsyncThunk('getCity',async()=>{
     try{
-        const response = await axios.get(`${BASE_URL}/cities`)
+        const response = await axios.get(`${apiUrl}/cities`)
         return response.data.response//esto seria el payload
 
     }catch(error){
