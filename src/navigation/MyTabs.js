@@ -1,14 +1,15 @@
 
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Home from "../screens/Home";
-import { getHeaderTitle } from '@react-navigation/elements';
 import Ionicons from 'react-native-vector-icons/Ionicons'
-
+import Hotels from "../screens/Hotels";
+import { createStackNavigator } from "@react-navigation/stack";
+import HotelDetails from "../screens/HotelDetails";
 
 
 
 const Tab = createBottomTabNavigator();
-
+const Stack = createStackNavigator()
 export default function MyTabs() {
   return (
     <Tab.Navigator screenOptions={({ route }) => ({
@@ -33,7 +34,8 @@ export default function MyTabs() {
       tabBarInactiveTintColor: 'gray',
     })}>
       <Tab.Screen name="Home" component={Home}  />
-
+      <Tab.Screen name="Hotels" component={Hotels}/>
+      <Stack.Screen name="HotelDetails" component={HotelDetails}/>
     </Tab.Navigator>
   );
 }

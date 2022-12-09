@@ -29,7 +29,6 @@ export default function Home() {
       .then((res) => setCities(res.payload))
       .catch((err) => err);
   }, []);
-  console.log(cities);
   const { width, height } = Dimensions.get("screen");
   const styles = StyleSheet.create({
     tinyLogo: {
@@ -116,7 +115,7 @@ export default function Home() {
             
           />
         </SafeAreaView>
-        <Footer></Footer>
+        {/* <Footer></Footer> */}
       </View>
     </ScrollView>
   );
