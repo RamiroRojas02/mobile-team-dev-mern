@@ -7,6 +7,7 @@ export default function App() {
   return (
     <Provider store={store}>
       <NavigationContainer>
+        {/* <Stacks/> */}
         <MyTabs/>
       </NavigationContainer>
     </Provider>
