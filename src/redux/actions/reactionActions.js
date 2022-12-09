@@ -1,7 +1,8 @@
 import { createAsyncThunk  } from "@reduxjs/toolkit";
 import axios from 'axios'
 
-import { BASE_URL } from '../../api/url'
+import apiUrl from "../../../url";
+
 
 const getReactionsByEachItinerary = createAsyncThunk('getReactionsByEachItinerary',async(data)=>{
     let {showId,itineraryId}= data

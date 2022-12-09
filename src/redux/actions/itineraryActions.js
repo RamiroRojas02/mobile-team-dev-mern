@@ -1,6 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from 'axios'
-import { BASE_URL } from '../../api/url'
+import apiUrl from "../../../url";
+
 
 const getItineraries = createAsyncThunk("allItineraries", async () => {
   try{

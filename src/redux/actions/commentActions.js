@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import Swal from "sweetalert2";
-import apiUrl from "../../url";
+import apiUrl from "../../../url";
+
 
 
 
