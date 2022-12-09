@@ -13,7 +13,7 @@ import { useDispatch, useSelector } from "react-redux";
 import hotelsActions from "../redux/actions/hotelsActions";
 import { useState } from "react";
 import cityActions from "../redux/actions/cityActions";
-import Footer from "../components/Footer";
+
 
 export default function Home() {
   const [hotels, setHotels] = useState(null);
@@ -115,7 +115,6 @@ export default function Home() {
             
           />
         </SafeAreaView>
-        {/* <Footer></Footer> */}
       </View>
     </ScrollView>
   );
